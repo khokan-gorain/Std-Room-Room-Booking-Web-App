@@ -1,0 +1,232 @@
+<script lang="javaScript">
+function heron()
+{
+    
+    //prompt("hkdnls");
+    txt1  =  document.getElementById('n1');
+    var first_side = parseInt(txt1.value);
+    txt2 =  document.getElementById('n2');
+    var second_side = parseInt(txt2.value);
+    txt3 =  document.getElementById('n3');
+    var third_side = parseInt(txt3.value);
+
+    var s = (first_side + second_side + third_side)/2;
+   var area =  Math.sqrt(s*((s-first_side)*(s-second_side)*(s-third_side)));
+ // prompt(area);
+   document.getElementById('result').value=area;
+
+}
+
+function product()
+{
+    txt1  =  document.getElementById('n4');
+    var x = parseInt(txt1.value);
+    txt2 =  document.getElementById('n5');
+    var y = parseInt(txt2.value);
+    txt3 =  document.getElementById('n6');
+    var z = parseInt(txt3.value);
+
+if (x>0 && y>0 && z>0)
+{
+       alert("x, y, z all are positove sign + ");
+}
+else if (x<0 && y<0 && z<0)
+        {
+            alert("x, y, z all are negitive sign - ");
+        }
+        else if (x>0 && y<0 && z<0)
+        {
+            alert("Only  x is positive + ");
+        }
+        else if (x<0 && y>0 && z<0)
+        {
+            alert("Only  y is positive +");
+        }
+        else
+        {
+            alert("Only  z is positive +");
+        }
+}
+
+function sqroot()
+{
+var root1, root2;
+
+    txt1  =  document.getElementById('n7');
+    var a = parseInt(txt1.value);
+    txt2 =  document.getElementById('n8');
+    var b = parseInt(txt2.value);
+    txt3 =  document.getElementById('n9');
+    var c = parseInt(txt3.value); 
+
+// calculate discriminant
+var discriminant = b * b - 4 * a * c;
+
+// condition for real and different roots
+if (discriminant > 0) {
+    root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+    //console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+    document.getElementById('result2').value=(`The roots of quadratic equation are ${root1} and ${root2}`);
+   
+}
+
+// condition for real and equal roots
+else if (discriminant == 0) {
+    root1 = root2 = -b / (2 * a);
+
+    document.getElementById('result2').value=(`The roots of quadratic equation are ${root1} and ${root2}`);
+}
+}
+
+
+function cToF() 
+{
+  txt1  =  document.getElementById('n10');
+  var cTemp = parseInt(txt1.value);
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+    document.getElementById('ft').value = message;
+    var kv = cToFahr+273.15;
+    document.getElementById('kv').value = kv;
+}
+function billCalculate()
+{
+    txt1  =  document.getElementById('n12');
+    var call_num = parseInt(txt1.value);
+    var total_bill;
+    var min_bill = 200; 
+
+    if(call_num <= 100)
+    {
+       total_bill = min_bill;
+    }
+    else if(call_num <= 150) // 150 <= 150 ,  101-100 = 1
+    {
+        temp = call_num - 100;
+        total_bill = 200+(temp*(0.60));
+    }
+    else if(call_num <= 200) // 200 <= 200
+    {
+        temp = call_num - 150;
+        total_bill = min_bill+(50*(0.60))+(temp*(0.50));
+    }
+    else if(call_num >= 200) // 202 >= 200  , 202-200 = 2
+    {
+        var temp = call_num-200;
+       total_bill = min_bill+(50*(0.60))+(50*(0.50))+(temp*(0.40));
+    }
+    document.getElementById('bill_res').value = (`Total Monthly Bill RS. ${total_bill}`);
+}
+
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<link rel="stylesheet" href="pro.css" type="text/css"  media="">
+<link href="img/icon.ico" type="image" rel="icon"/>
+<title>Simple javaScript Project</title>
+</head>
+<body>
+    <div id="main_div">
+
+        <div class="head">
+            <h1 class="title">Simple JavaScript Project</h1>
+        </div>
+        <div class="intro">
+            <marquee direction="up" height="100px">
+                <p class="name">
+                    Name &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;Khokan Gorain <br>
+                    Course &nbsp;&nbsp;:&nbsp;&nbsp;MCA <br>
+                    Roll No &nbsp;:&nbsp;&nbsp;51<br>
+                    Session &nbsp;:&nbsp;&nbsp;2022-24 <br>
+                </p>
+            </marquee>
+            
+        </div>
+        <h3>1.	Write a program to calculate area of a triangle using  the  heron's formula, 
+            by taking the values of the sides from the user.</h3>
+
+            <div class="heron">
+                <div class="first">
+                    <input type="text" class="enter_data" id="n1" placeholder=" Enter the first side of triangle">
+                    <input type="text" class="enter_data" id="n2" placeholder=" Enter the second side of triangle">
+                    <input type="text" class="enter_data" id="n3" placeholder=" Enter the third side of triangle">
+                </div>
+                <div class="second">
+                    <input type="text" class="enter_data" id="result" placeholder=" Result">
+                    <input type="button"  id="btn" onclick="heron()" value="Calculate Area of triangle">
+                </div>
+            </div>
+           
+            <h3>2.	write a javascript conditional statement to find the sign of product of three 
+                numbers. Display an alert box with the specified sign.</h3>
+    
+                <div class="heron">
+                    <div class="first">
+                        <input type="text" class="enter_data" id="n4" placeholder=" Enter the number of x">
+                        <input type="text" class="enter_data" id="n5" placeholder=" Enter the number of y">
+                        <input type="text" class="enter_data" id="n6" placeholder=" Enter the number of z">
+                    </div>
+                    <div class="second">
+                        <input type="button"  id="btn" onclick="product()" value="Product of three numbers">
+                    </div>
+                </div>
+
+                <h3>3. Find roots of quadratic equation by taking the necessary input from
+                    the user.Display the roots in the current HTML Dcoument.</h3>
+        
+                    <div class="heron">
+                        <div class="first">
+                            <input type="text" class="enter_data" id="n7" placeholder=" Enter the number of x">
+                            <input type="text" class="enter_data" id="n8" placeholder=" Enter the number of y">
+                            <input type="text" class="enter_data" id="n9" placeholder=" Enter the number of z">
+                        </div>
+                        <div class="second">
+                            <input type="text" class="enter_data" id="result2" placeholder=" Result">
+                            <input type="button"  id="btn" onclick="sqroot()" value="Squere Roots">
+                        </div>
+                    </div>
+
+                    <h3>4. Write a program to convert the temperatures from celsius to fahrenheit and also
+                        display the temperature in Kelvin.
+                    </h3>
+            
+                        <div class="heron">
+                            <div class="first">
+                                <input type="text" class="enter_data" id="n10" placeholder=" Enter the temperatures in celsius">
+                                <input type="text" class="enter_data" id="ft" placeholder=" Fahrenheit temperatures">
+                               
+                            </div>
+                            <div class="second">
+                                <input type="text" class="enter_data" id="kv" placeholder=" Kelvin temperatures">
+                                <input type="button"  id="btn" onclick="cToF()" value="Celsius to Fahrenheit">
+                            </div>
+                        </div>
+            
+                        <h3>5. Write a program that prompts the user to input numbers of calls and 
+                            calculate the monthly telephone bills as per following rules:<br>
+                            Minimum Rs. 200 per for up to 100 calls.<br>
+                            Plus Rs. 0.60 per call for next 50 calls.<br>
+                            Plus Rs. 0.50 per call for next 50 calls.<br>
+                            Plus Rs. 0.40 per call for any call beyond 200 calls.<br>
+                        </h3>
+                
+                            <div class="heron">
+                                <div class="first">
+                                    <input type="text" class="enter_data" id="n12" placeholder=" Enter Number of Monthly Calls ">
+                                    <input type="text" class="enter_data" id="bill_res" placeholder=" Total Bills...">
+                                   
+                                </div>
+                                <div class="second">
+                                    <input type="button"  id="btn" onclick="billCalculate()" value="Calculate Monthly Bills">
+                                </div>
+                            </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #f5f5f2;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+::-webkit-scrollbar-track
+{
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb
+{
+    background:#827717 ;
+}
+.logo-name
+{
+    font-family: 'Poppins', sans-serif; 
+     font-weight: 400;
+     font-size:30px;
+     color:#ffff;
+     letter-spacing: 1px;
+     margin-left: 20px;
+     line-height: 80px;
+}
+@media screen and (min-width:400px) and (max-width:480px)
+{
+    .logo-name
+    {
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 400;
+     font-size:25px;
+     color:#ffffff;
+     letter-spacing: 1px;
+     line-height: 80px;
+    }
+        
+}
+@media screen and (min-width:360px) and (max-width:400px)
+{
+    .logo-name
+    {
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 400;
+     font-size:20px;
+     color:#ffff;
+     letter-spacing: px;
+     line-height: 80px;
+        
+    }    
+}
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #827717;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50xp 100px;
+    flex-wrap: wrap;
+    z-index: 10;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.0);
+}
+
+nav ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+ nav ul li
+{
+    margin: 0 5px;
+}
+nav ul li a
+{
+    color:#ffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    border-bottom: 1.5px solid transparent;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover
+{
+    border-color: #1f1f1f;
+    color: #1f1f1f;
+    text-decoration: none;
+} 
+nav .menu-btn i
+{
+    color: aliceblue;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"]
+{
+    display: none;
+}
+
+@media(max-width:1000px)
+{
+    nav 
+    {
+        padding: 0px 20px 0px 0px;
+    }
+}
+
+@media(max-width:920px)
+{
+    nav .menu-btn i
+    {
+        display: block;
+    }
+    #click:checked ~ .menu-btn i:before
+    {
+        content: '\f00d';
+     
+    }
+
+    nav ul{
+        position:fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        z-index: 9999;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul
+    {
+        left: 0px;
+        background: #827717;
+    }
+ 
+    nav ul li 
+     {
+        width: 100%;
+        margin: 40px 0px;
+     }
+     nav ul li a
+     {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.86, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a
+    {
+        margin-left:0px;
+    }
+}
+.verify-continer
+{
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    
+}
+.card-view
+{
+    background: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+
+.std_room_registration_title
+{
+    font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 1px;
+     color:#827717;
+     font-size: 30px;
+     text-align: center;
+}
+.margen-left
+{
+    margin-left: 250px;
+    margin-top: 3px;
+}
+
+.room_details_title
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 1px;
+     color:#827717;
+     font-size: 23px;
+     margin-top: 15px;
+     margin-bottom: 15px;
+}  
+.room-details-rows
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 300;
+     letter-spacing: 0.5px;
+     color:black;
+     font-size: 13px;
+     margin-top: 15px;
+     margin-bottom: 15px;
+    
+}
+.room_type_title
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 200;
+     letter-spacing: 0.5px;
+     color:black;
+     font-size: 12px;
+}
+.available_room
+{
+   text-align: center; 
+}
+
+input[type="number"]
+{
+   width: 50px;
+   text-decoration: none;
+   height: 22px;
+  text-align: center;
+}
+
+.verify-btn-top
+{
+    margin-top: 10px;
+
+}
+.code-face
+{
+    margin-top: 30px;
+}
+
+.send-mail-btn{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 8px;
+    border: none;
+    color:white;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    padding: 12px 0px;
+    margin-top: 22px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-left:0px;
+    transition: all 1s ease;
+    letter-spacing: 1px;
+
+}
+@media screen and (min-width:460px) and (max-width:500px){
+.verify-continer
+{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.card-view
+{
+    background: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+.std_room_registration_title
+{
+    font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 1px;
+     color:#827717;
+     font-size: 25px;
+    text-align: center;
+}
+.margen-left
+{
+    margin-left: 90px;
+    margin-top: 3px;
+}
+.email-id-text
+{
+     margin-bottom: 0px;
+     font-family: 'Poppins', sans-serif;
+     letter-spacing: 1px;
+     color:#0f0f0e;
+     font-size: 15px;
+}
+.verify-btn-top
+{
+    margin-top: 10px;
+
+}
+.code-face
+{
+    margin-top: 0px;
+}
+.send-mail-btn{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 4px;
+    border: none;
+    color:white;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    padding: 12px 0px;
+    margin-top: 22px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left:px;
+    transition: all 1s ease;
+    letter-spacing: 1px;
+  
+}
+}
+
+@media screen and (min-width:400px) and (max-width:460px){
+.verify-continer
+{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.card-view
+{
+    background: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+.std_room_registration_title
+{
+    font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 1px;
+     color:#827717;
+     font-size: 25px;
+    text-align: center;
+}
+.margen-left
+{
+    margin-left: 90px;
+    margin-top: 3px;
+}
+.email-id-text
+{
+     margin-bottom: 0px;
+     font-family: 'Poppins', sans-serif;
+     letter-spacing: 1px;
+     color:#0f0f0e;
+     font-size: 15px;
+}
+.verify-btn-top
+{
+    margin-top: 10px;
+
+}
+.code-face
+{
+    margin-top: 0px;
+}
+.send-mail-btn{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 4px;
+    border: none;
+    color:white;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    padding: 12px 0px;
+    margin-top: 22px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left:px;
+    transition: all 1s ease;
+    letter-spacing: 1px;
+  
+}
+}
+@media screen and (min-width:360px) and (max-width:400px){
+.verify-continer
+{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.card-view
+{
+    background: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+
+.std_room_registration_title
+{
+    font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 1px;
+     color:#827717;
+     font-size: 23px;
+    text-align: center;
+}
+.margen-left
+{
+    margin-left: 60px;
+    margin-top: 3px;
+}
+.email-id-text
+{
+     margin-bottom: 0px;
+     font-family: 'Poppins', sans-serif;
+     letter-spacing: 1px;
+     color:#0f0f0e;
+     font-size: 15px;
+}
+.verify-btn-top
+{
+    margin-top: 10px;
+
+}
+.code-face
+{
+    margin-top: 30px;
+}
+.send-mail-btn
+{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 3px;
+    border: none;
+    color:white;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    padding: 12px 0px;
+    margin-top: 22px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left:0px;
+    transition: all 1s ease;
+    letter-spacing: 1px;
+  
+}
+}

@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #f5f5f2;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+::-webkit-scrollbar-track
+{
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb
+{
+    background:#827717 ;
+}
+.logo-name
+{
+    font-family: 'Poppins', sans-serif; 
+     font-weight: 400;
+     font-size:30px;
+     color:#ffff;
+     letter-spacing: 1px;
+     margin-left: 20px;
+     line-height: 80px;
+}
+@media screen and (min-width:400px) and (max-width:480px)
+{
+    .logo-name
+    {
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 400;
+     font-size:25px;
+     color:#ffffff;
+     letter-spacing: 1px;
+     line-height: 80px;
+    }
+        
+}
+@media screen and (min-width:360px) and (max-width:400px)
+{
+    .logo-name
+    {
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 400;
+     font-size:20px;
+     color:#ffff;
+     letter-spacing: px;
+     line-height: 80px;
+        
+    }    
+}
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #827717;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50xp 100px;
+    flex-wrap: wrap;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.0);
+}
+nav ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+ nav ul li
+{
+    margin: 0 5px;
+}
+nav ul li a
+{
+    color:#ffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500px;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+} 
+nav ul li a:hover
+{
+    color: #1f1f1f;
+    text-decoration: none;
+}
+nav .menu-btn i
+{
+    color: aliceblue;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"]
+{
+    display: none;
+}
+
+@media(max-width:1000px)
+{
+    nav 
+    {
+        padding: 0px 20px 0px 0px;
+    }
+}
+
+@media(max-width:920px)
+{
+    nav .menu-btn i
+    {
+        display: block;
+    }
+    #click:checked ~ .menu-btn i:before
+    {
+        content: '\f00d';
+     
+    }
+    
+    nav ul{
+        position:fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    #click:checked ~ ul
+    {
+        left: 0px;
+        background: #827717;
+    }
+ 
+    nav ul li 
+     {
+        width: 100%;
+        margin: 40px 0px;
+     }
+     nav ul li a
+     {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.86, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a
+    {
+        margin-left:0px;
+    }
+}
+
+
+
+
+.dear-students{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     font-size: 50px;
+     letter-spacing: 1px;
+     color:#827717;
+}
+.for-student
+{
+     font-family: 'Poppins', sans-serif; 
+     text-align: center;
+     font-weight: 400;
+     font-size: 25px;
+     color:#807575;
+     letter-spacing: 1px;
+     text-align: center;
+     margin-top: 18px;
+
+    
+}
+@media screen and (min-width:460px) and (max-width:500px){
+    .dear-students{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     font-size: 30px;
+     letter-spacing: 0.5px;
+     color:#827717;
+}
+.for-student
+{
+     font-family: 'Poppins', sans-serif; 
+     text-align: center;
+     font-weight: 400;
+     font-size: 15px;
+     color:#807575;
+     letter-spacing: 0.5px;
+     text-align: center;
+     margin-top: 10px;   
+}
+}
+@media screen and (min-width:400px) and (max-width:480px){
+    .dear-students{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     font-size: 30px;
+     letter-spacing: 0.5px;
+     color:#827717;
+}
+.for-student
+{
+     font-family: 'Poppins', sans-serif; 
+     text-align: center;
+     font-weight: 400;
+     font-size: 15px;
+     color:#807575;
+     letter-spacing: 0.5px;
+     text-align: center;
+     margin-top: 10px;   
+}
+}
+@media screen and (min-width:360px) and (max-width:400px){
+   .dear-students{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     font-size: 26px;
+     letter-spacing: 0.5px;
+     color:#827717;
+}
+.for-student
+{
+     font-family: 'Poppins', sans-serif; 
+     text-align: center;
+     font-weight: 400;
+     font-size: 12px;
+     color:#807575;
+     letter-spacing: 0.5px;
+     text-align: center;
+     margin-top: 8px;
+
+    
+}
+}
+
+
+
+.card-view
+{
+    background: #ffff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+}
+.lodge-name
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 1px;
+     color:#827717;
+      
+}
+.avalible-bed
+{
+    color: green;
+}
+.avalible-not-bed
+{
+    color: red;
+}
+.lodge-sub-title
+{
+     font-family: 'Poppins', sans-serif; 
+     font-size: 15px;
+     color:#000000;
+     letter-spacing: 1px;
+      
+}
+.lodge-img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border:3px solid #827717;
+    border-radius:100%;
+    
+}
+.see-more-btn-div
+{
+    text-align:center;
+}
+.see-more-btn
+{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 10px;
+    border: none;
+    color:whitesmoke;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:300;
+    font-size: 12px;
+    padding: 12px 0px;
+    font-weight: bold;
+    width: 100px;
+    margin-left:70px;
+    transition: all 1s ease;
+    
+}
+
+#see-more-ancher-tag
+{
+   text-decoration:none; 
+   outline:none;
+}
+@media screen and (min-width:460px) and (max-width:500px){
+.lodge-name
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 0.5px;
+     font-size: 16px;
+     color:#827717;
+}
+ 
+.card-view
+{
+  
+    border-radius: 13px;
+    margin-left: 1px;
+    margin-right:1px;
+}
+
+.lodge-sub-title
+{
+     font-family: 'Poppins', sans-serif; 
+     font-size: 11px;
+     color:#000000;
+     letter-spacing: 0.5px;
+      
+}
+.lodge-img{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border:1px solid #827717;
+    border-radius:100%;
+  
+}
+.avalible-bed
+{
+    color: green;
+    font-size: 10px;
+    margin-top:5px;
+}
+.avalible-not-bed
+{
+    color: red;
+    font-size: 10px;
+    margin-top:5px;
+}
+
+.see-more-btn
+{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 5px;
+    border: none;
+    color:whitesmoke;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:100;
+    font-size: 9px;
+    padding: 8px 0px;
+    font-weight: bold;
+    width: 60px;
+    margin-left: 6px;
+    transition: all 1s ease;
+    outline:none;
+    text-decoration:none;
+    
+   
+}
+}
+
+@media screen and (min-width:400px) and (max-width:480px){
+.lodge-name
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 0.5px;
+     font-size: 16px;
+     color:#827717;
+}
+ 
+.card-view
+{
+  
+    border-radius: 13px;
+    margin-left: 1px;
+    margin-right:1px;
+}
+
+.lodge-sub-title
+{
+     font-family: 'Poppins', sans-serif; 
+     font-size: 11px;
+     color:#000000;
+     letter-spacing: 0.5px;
+      
+}
+.lodge-img{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border:1px solid #827717;
+    border-radius:100%;
+  
+}
+.avalible-bed
+{
+    color: green;
+    font-size: 10px;
+    margin-top:5px;
+}
+.avalible-not-bed
+{
+    color: red;
+    font-size: 10px;
+    margin-top:5px;
+}
+
+.see-more-btn
+{
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 5px;
+    border: none;
+    color:whitesmoke;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:100;
+    font-size: 9px;
+    padding: 8px 0px;
+    font-weight: bold;
+    width: 60px;
+    margin-left: 6px;
+    transition: all 1s ease;
+    outline:none;
+    text-decoration:none;
+    
+   
+}
+}
+@media screen and (min-width:360px) and (max-width:400px){
+.lodge-name
+{
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 600;
+     letter-spacing: 0.5px;
+     font-size: 15px;
+     color:#827717;
+}
+ 
+.card-view
+{
+  
+    border-radius: 10px;
+    margin-left: 1px;
+    margin-right:1px;
+}
+
+.lodge-sub-title
+{
+     font-family: 'Poppins', sans-serif; 
+     font-size: 9px;
+     color:#000000;
+     letter-spacing: 0.5px;
+      
+}
+.lodge-img{
+    margin-top: 17px;
+    margin-bottom: 5px;
+    border:1px solid #827717;
+    border-radius:100%;
+}
+.avalible-bed
+{
+    color: green;
+    font-size: 10px;
+}
+.avalible-not-bed
+{
+    color: red;
+    font-size: 10px;
+}
+
+.see-more-btn
+{
+    
+    background: linear-gradient(to right, #9e9d24,#827717);
+    border-radius: 5px;
+    border: none;
+    color:whitesmoke;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:100;
+    font-size: 9px;
+    padding: 8px 0px;
+    font-weight: bold;
+    width: 60px;
+    margin-left: 2px;
+    transition: all 1s ease;
+    outline:none;
+    text-decoration:none;
+    display:flex;
+    text-align:center;
+    
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
